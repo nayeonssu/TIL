@@ -1,14 +1,14 @@
 #weather {}
 #weather h1 {background-color: skyblue; color: rgb(45, 94, 156);}
-#weather .area {}
-#weather .temperature {}
-#weather p {}
+#weather .area {color: black;}
+#weather .temperature {color: black;}
+#weather p {color: green;}
 #weather .sub_title {background-color: #9cbbff;}
 #weather .humidity {color: red;}
 #weather .dust {background-color: #eee; color: orange;}
 #weather .result {background-color: rgb(53, 134, 255); color: white;}
 #news {}
-#news > a {color: rgb(255, 39, 39);}
+#news > a {color: rgb(226, 33, 33);}
 #news .box {background-color: #c89dff;}
 #news .box a {}
 #news .box a h2 {color: #591ec5;}
