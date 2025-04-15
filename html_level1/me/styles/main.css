@@ -1,9 +1,66 @@
-#mobile_wrap {background-color:#3575FF;}
-#mobile_wrap .photo {}
+#mobile_wrap {
+    background-color:#3575FF;/* mobile_wrap */
+    width:440px; height:956px;/* mobile_wrap */
+    text-align:center;/* 자식, 자손 정렬 */
+    font-family:'pretendard',sans-serif;/* 자식, 자손 글꼴 통일 */
+}
+#mobile_wrap .photo {
+    margin-top:116px;
+    margin-bottom:26px;
+    display:inline-block;/* 자식, 자손에게 상속되는 부분을 잘 봐야한다. */
+}
 #mobile_wrap .photo img {}
-#mobile_wrap h1 {}
-#mobile_wrap h1 span {color: yellow;}
-#mobile_wrap h2 {color: white;}
-#mobile_wrap .git {}
+#mobile_wrap h1 {
+    /* 글꼴 부모 상속 상태 */
+    font-weight:500;
+    font-size:1.875rem;
+    line-height:1.3;/* 행간 */
+    letter-spacing:-0.02rem;/* 자간 */
+    color: black;
+    margin-bottom:48px;
+}
+#mobile_wrap h1 span {
+    /* 글꼴, 행간, 자간은 상속상태 */
+    /* 부모와 다른 값만 작성(덮어쓰기 형태) */
+    font-weight:600;
+    font-size:2.5rem;
+    color: #FFD900;
+}
+#mobile_wrap h2 {
+    line-height:1.5;
+    font-size:1rem;
+    font-weight:600;
+    letter-spacing:-0.02em;
+    width:217px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    /* auto - 사용자마다 화면 넓이를 다르게 보기 때문에 자동으로 여백을 처리하는 기능이다. */
+    color: white;
+}
+#mobile_wrap .git {
+    line-height:1.5;
+    font-size:1rem;
+    font-weight:600;
+    letter-spacing:-0.02em;
+    width:217px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:30px;
+    display:inline-block;/* 마진값이 잘못된게 아니다. 디스플레이 설정을 해야한다. */
+    text-align:left;
+    color: white;
+    background-color: #11141b;
+}
 #mobile_wrap .skill {}
-#mobile_wrap .skill li {color: white;}
+#mobile_wrap .skill li {
+    line-height:1.5;
+    font-size:1rem;
+    font-weight:600;
+    letter-spacing:-0.02em;
+    width:217px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    color: white;
+}
