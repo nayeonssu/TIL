@@ -48,3 +48,28 @@
 * `<a href="#header"></a>` #header링크로 바로가기 링크<!-- 같은파일 내 다른 위치 이동 -->
 * `<a href="./basic/index.html"></a>` basic 폴더에서 index.html로 이동해라<!-- 상대경로링크 -->
 * `<a href="./basic/index.html#main"></a>` basic 폴더에서 index.html파일을 `클릭했을 때` main으로 이동해라<!-- (상대경로링크 + 바로가기링크)다른파일 내 다른 위치 이동 -->
+## CSS Style Sheet
+* 외부스타일시트 파일 저장 **styles** 폴더에 `파일명.css` 저장한다.
+* 위 파일 생성 후 CSS연결을 원하는 HTML파일 head위치에 `<link>`태그로 연결한다.
+* HTML작성 후 HTML의 모든 디자인 형태를 초기화하는 `reset.css` 반드시 연결!
+* 웹글꼴(Noto Sans KR, Pretendard 등) 연결 시 HTML파일에 `<link>`태그 연결!
+### head태그 내에 들어가는 link태그 작성 순서
+* 웹글꼴 포함 기타 플러그인 연결 주소<!-- 가져와서 넣어야 할 곳 --> <!-- 쉬운 작업을 위해 설치하는 앱?을 플러그인 이라고 한다. -->
+* reset.css
+* 해당 HTML별 디자인<!-- 파일명 다 다름 -->.css
+### 디자인 CSS 작성 시 작성 순서 및 주의사항
+* **부모 -> 자식**순서로 가장 바깥쪽 부모부터 먼저 선택자<!-- CSS에 작성하는것 -->를 만들고 디자인한다.
+* 레이아웃 관련 요소에 `widthm height` 속성 작성 시 영역 확인을 위한 `background-color`를 꼭 함께 작성해서 정확히 구분한다. 이 때 색상은 쉬운 영역 구분을 위한 `aqua, lime, yellow, pink`등의 밝은 생상 위주로 사용한다. 영역 확인과 디자인 작업을 모두 마친 후 위 색상은 제거로 마무리 해야한다.
+* 실제 디자인에 들어가는 색상은 **rbga 또는 헥사코드**로 입력하고 테스트용으로 입력하는 임시 색상은 **영문명**으로 입력해야 한다.
+### 자주 이용하는 CSS 속성 값과 기본값
+* `letter-spacing` - 자간 설정 | 0 | `letter-spacing:-0.02rem;`<!-- figma -> -2% -->
+* `line-height` - 행간 설정 | 100% | `line-height:1.5;`<!-- figma -> 150% -->
+* `font-size` - 글꼴 크기 | 16px(1em) | `font-size:1.563rem;`<!-- figma -> 25px --> <!-- 각각의 폰트에 다른 값을 주고싶다면 `rem` 같이 주고 싶다면 `em`을 사용한다.(보통 rem으로 사용한다)-->
+* `color` - 글꼴 색 | `color:rgba(0,0,0,0.5);`
+* `background-color` - 글꼴 배경 색상 | `background-color:#000;`
+* `width` - 가로크기 | `width:100px;`
+* `height` - 세로크기 | `height:100px;`
+* `margin` - 바깥쪽 여백 | `margin-top:50px;`
+* `border-radius` - 모서리 둥글기 | `border-radius:10px;`
+* `font-weight` - 글꼴 두께 | 400 | `font-weight:800;`<!-- 400->Regular 숫자가 커질수록 두꺼워진다. -->
+* `font-family` - 글꼴 설정 | `fornt-family:고딕, 맑은고딕, sans-serife;`<!-- 대표,후보 폰트가 적용이 안될때는 sans-serife의 글꼴의 유형을 작성하라 -->
