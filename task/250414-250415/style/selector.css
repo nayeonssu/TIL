@@ -14,3 +14,4 @@
 #news .box a h2 {color: #591ec5;}
 #news .box a p {color: white;}
 #news > p {background-color: wheat;}
+#news > p span {color: green;}
