@@ -1,0 +1,60 @@
+/* main.css */
+#wrap {
+    background-color: pink;
+    width: 440px;
+    height: 956px;
+    text-align:left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#wrap h1 {
+    padding-top:137px;
+    margin-bottom:30px;
+    font-size:2.5rem;
+    font-weight:700;
+    color: #58A399;
+}
+#wrap > p {
+    display: inline-block
+}/* #wrap 모든 자식의 p */
+#wrap h1+p {
+    background-color: yellow;
+    color: #A8CD9F;
+}/* #wrap 의 h1 옆에 p */
+#wrap #login_frm {
+    background-color: aqua;
+    margin-bottom:215px;
+    margin-top: 99px;
+}
+#wrap #login_frm h2 {
+    background-color: rgb(25, 88, 67);
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #26425E;
+}
+#wrap #login_frm p {
+    height:44px;
+    line-height:44px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+#wrap #login_frm p input {
+    height:44px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #58A399;
+}
+#wrap #login_frm p #login_btn {
+    height:44px;
+    border-radius: 10px;
+    border: 1px solid #58A399;
+}
+#wrap #login_frm p .login_google {
+    height:44px;
+    border-radius: 10px;
+    border: 1px solid #58A399;
+}
+#wrap #login_frm+p {
+    background-color: red;
+}/* #wrap의 login_frm 옆에 p */
+#wrap #login_frm+p a {}

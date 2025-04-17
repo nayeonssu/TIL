@@ -1,0 +1,51 @@
+/* index.css */
+#wrap {
+    background-color: #58A399;
+    width:440px;/* 웹사이트 가로비율 */
+    height:956px;/* 웹사이트 세로비율 */
+    text-align:center;/* 수평 가운데정렬 */ /* 자식 자손을 가운데에 보내라(인라인인 경우) */
+}
+#wrap h1 {
+    padding-top:294px;/* 위쪽 여백값 */ /* paddig으로 썼을때  */
+    margin-bottom:80px;/* 아래쪽 여백값 */
+}
+#wrap h1 img {}
+#wrap .btn_wrap {
+    width:300px;
+    /* 블록의 너비값을 부모보다 작게 설정했을 때 블록을 가운데졍렬 하고 싶다면? 
+    */
+    margin-left:auto;
+    margin-right:auto;
+    text-align: left;/* btn_wrap의 인라인 자식, 자손 왼쪽정렬 */
+}
+#wrap .btn_wrap a {
+    display:block;/* 블록의 너비는 부모의 너비의 100%와 같다. */ /* 부모가 100이면 자식도 100이다. */
+    text-align: center;/* 글자보다 넓은 너비를 가진 a의 자식 글자를 가운데정렬 */
+}/* 공통태그 선택자 */ /* 같은 값을 주고 싶을때는 공통으로 들어간 태그로 쓴다. */
+#wrap .btn_wrap .login_btn {
+    height:40px;
+    line-height:40px;/* 이때만 px를 쓰고 대부분은 %를 쓴다. */
+    background-color: #fff;
+    color: #26425E;
+    border-radius: 10px;/* 모서리 둥글기 */
+    font-weight:600;
+    font-size: 0.875rem;
+}
+#wrap .btn_wrap .sign_up_btn {
+    margin-top:16px;
+    margin-bottom:10px;
+    height:40px;
+    line-height:40px;
+    background-color: #58A399;
+    color: #fff;
+    border:1px solid #fff;/* border:선두께 선모양 선색상; */
+    border-radius: 10px;
+    font-weight:600;
+    font-size: 0.875rem;
+}/* margin = login에서 한번 sign up에서 한번 줄 수 있지만 중간에 위치한 버튼에게 주는게 보기 편리하다.(형제가 3개일때) */
+#wrap .btn_wrap .pw_search {
+    /* text-align: left; */ /* 부모에게서 center의 값을 줘서 다시 text-align을 줘야한다. */
+    color: #fff;
+    font-size: 0.75rem;/* 부모에게서 설정한 값을 따라가지 않기 위해 rem을 쓴다. */
+    display:inline;
+}
