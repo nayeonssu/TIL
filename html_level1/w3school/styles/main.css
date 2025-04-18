@@ -2,12 +2,14 @@
 #wrap {
     width: 440px;
     height: 956px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
+/*     padding-left: 15px;
+    padding-right: 15px; */
 }
 #wrap h1 {
     padding-top:137px;
-    margin-bottom:30px;
+    margin: 0 0 30px;
+    /* margin-bottom:30px; */
     font-size:2.5rem;/* 40px */
     font-weight:700;/* bold */
     color: #58A399;
@@ -15,13 +17,15 @@
 #wrap > p {}/* #wrap 모든 자식의 p */
 #wrap h1+p {
     color: #A8CD9F;
-    margin-bottom: 99px;
+    margin: 0 0 99px;
+    /* margin-bottom: 99px; */
 }/* #wrap 의 h1 옆에 p */
 #wrap #login_frm {}
 #wrap #login_frm h2 {
     font-size: 1.375rem;
     font-weight: 600;
-    margin-bottom:13px;
+    margin: 0 0 13px;
+    /* margin-bottom:13px; */
     color: #26425E;
 }
 #wrap #login_frm p {margin-bottom: 10px;}
@@ -33,20 +37,22 @@
 }/* placeholder 속성 선택자 작성법 */
 #wrap #login_frm p input {
     width:410px;
-    padding-left: 20px;
+    padding: 15px 20px;
+/*     padding-left: 20px;
     padding-right: 20px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 15px; */
     border-radius: 10px;/* 모서리 둥글기 */
     font-weight: 300;
     border: 1px solid #58A399;
 }/* 입력하는 영역 */
 #wrap #login_frm p #login_btn {
     width: 410px;
-    padding-left: 20px;
+    padding: 15px 20px;
+    /* padding-left: 20px;
     padding-right: 20px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 15px; */
     border-radius: 10px;
     font-weight:600;
     font-size: 0.875rem;
@@ -58,10 +64,11 @@
     display: block;/* 인라인이라서 */
     text-align: center;
     width: 410px;
-    padding-left: 20px;
+    padding: 15px 20px;
+    /* padding-left: 20px;
     padding-right: 20px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 15px; */
     font-weight:600;
     font-size: 0.875rem;
     border-radius: 10px;
@@ -69,7 +76,8 @@
     color: #58A399;
 }/* a의 기본정렬이 lefr 라서 center로 맞춰줘야한다. */
 #wrap #login_frm+p {
-    margin-top:175px;
+    margin: 175px 0 0;
+    /* margin-top:175px; */
     text-align: center;
     letter-spacing:0;/* 자간 */ /* -0.02 = figma -2% */
     font-weight: 300;

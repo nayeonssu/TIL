@@ -6,16 +6,19 @@
     text-align:center;/* 수평 가운데정렬 */ /* 자식 자손을 가운데에 보내라(인라인인 경우) */
 }
 #wrap h1 {
-    padding-top:294px;/* 위쪽 여백값 */ /* paddig으로 썼을때  */
-    margin-bottom:80px;/* 아래쪽 여백값 */
+    padding: 311px 0 0 ;
+    /* padding-top:294px; *//* 위쪽 여백값 */ /* paddig으로 썼을때  */
+    margin: 0 0 80px;
+    /* margin-bottom:80px; *//* 아래쪽 여백값 */
 }
 #wrap h1 img {}
 #wrap .btn_wrap {
     width:300px;
     /* 블록의 너비값을 부모보다 작게 설정했을 때 블록을 가운데졍렬 하고 싶다면? 
     */
-    margin-left:auto;
-    margin-right:auto;
+    /* margin-left:auto;
+    margin-right:auto; */
+    margin: 0 auto;
     text-align: left;/* btn_wrap의 인라인 자식, 자손 왼쪽정렬 */
 }
 #wrap .btn_wrap a {
@@ -32,8 +35,9 @@
     font-size: 0.875rem;
 }
 #wrap .btn_wrap .sign_up_btn {
-    margin-top:16px;
-    margin-bottom:10px;
+/*     margin-top:16px;
+    margin-bottom:10px; */
+    margin: 16px 0;
     height:40px;
     line-height:40px;
     background-color: #58A399;
