@@ -1,0 +1,32 @@
+/* bg.css */
+.bg{
+    width: 1000px; height: 1000px;
+    background-repeat:no-repeat;
+}
+.bg1 {
+    background: yellow url(https://i.pinimg.com/236x/61/c6/7d/61c67d9940fe4614caef92cf463bda60.jpg) right center;
+    /* background-color: yellow;
+    background-image: url(https://i.pinimg.com/236x/61/c6/7d/61c67d9940fe4614caef92cf463bda60.jpg); */
+    /* background-repeat: no-repeat; */ /* 반복 안함 */
+    background-position: center top;
+}
+.bg2 {
+    background: orange url(../images/test.jpg) no-repeat 0 60%;
+    /* background-color: aqua;
+    background-image: url(../images/test2.jpg); */
+    /* background-repeat:repeat-y */
+    /* background-position: center 30%; */ /* lefr, top */ /* k y축을 %로 맟춰서 원하는 이미지 부분을 보이도록 한다. */
+    /* background-size: contain; */ /* 이미지에 따라 빈 부분이 생길 수 있다. */
+    /* background-size: cover; */ /* 이미지에 따라 빈 부분이 생길 수 있다. */
+    background-size: 40% auto;
+}
+.bg3 {
+    background: skyblue url(https://i.pinimg.com/736x/37/4b/0e/374b0eaf9264b07cc133213b9463c812.jpg) no-repeat fixed center 80% / cover; /* 통합 속성을 이용하는게 편리하다. */
+    /* height:3000px;/* 덮어쓰기로 먼저 적용이 된다.
+    background-color: coral;
+    background-image: url(https://i.pinimg.com/736x/37/4b/0e/374b0eaf9264b07cc133213b9463c812.jpg);
+    background-position: center 0;
+    background-attachment: fixed;
+    background-size:cover; */
+    
+}

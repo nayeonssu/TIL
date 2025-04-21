@@ -1,0 +1,29 @@
+/* nth1.css */
+table, tr, td {border: 1px solid #000; border-collapse: collapse;}/* 제거할때 {}안에다가 작성 새로쓰는거x */
+#t {width:300px; height: 300px;}
+#t tbody {}
+#t tbody tr {}
+#t tbody tr td {}
+/* #t tbody tr:nth-child(2) td:nth-child(3) {background-color: yellow;}/* 첫번째 행의 1열에 색을 주고 싶을때 */
+#t tbody tr:first-child td:first-child {background-color: coral;}/* 행의 첫째에게 주고 싶을때 -> first-child 사용 | 막내에게 주고 싶을때 -> last-child */
+#t tbody tr:nth-child(2) td:nth-child(2) {background-color:orange}/* 형제가 2개 이상일때 :nth-child를 붙인다. */
+/* #t tbody tr:nth-child(3) td:nth-child(3) {background-color: pink;} */
+#t tbody tr:last-child :last-child {background-color: limegreen;}
+.box h2:nth-child(3)/* 자식중의 몇번째인지 */ {background-color: aqua;}
+.box h2:nth-of-type(1) {color: red;}
+.box h2:first-of-type {font-weight: 800;}
+.box p:nth-child(5) {background-color: skyblue;}
+.box p:nth-of-type(3) {color: purple;}
+.list {}
+.list li {
+    border: 1px solid #000;
+    width:50px;
+    height:50px;
+    display:inline-block;
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 50px;
+}
+.list li:nth-child(3n+2) {background-color: yellow;}
+.list li:nth-child(even) {border:2px solid red;}
+.list li:nth-child(odd) {color: purple;}
