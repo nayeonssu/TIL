@@ -1,0 +1,85 @@
+/* index.css */
+main {
+    background-color: #111;
+    width: 460px; height: 100vh;/* 보이는 화면 크기만큼 */
+    margin: 0 auto;/* 좌/우 여백을 자동으로 처리한다. */
+}
+main h1 {
+    text-align: center;
+    padding: 100px 0 0;
+    margin:0 0 50px;
+}
+main h1 a {}
+main h1 a img {width: 200px;}
+main h1 section {}
+/* ==========================탭 제목 */
+main section .tab_title {
+    overflow:hidden;
+    margin-bottom: 40px;
+}
+main section .tab_title a {
+    width: 50%;
+    text-align: center;
+    float: right;
+    text-transform: uppercase;/* 글꼴 모두 대문자 */
+}/* *이나 a 태그 전체를 나타내는 의미만 작성해주면 됨 */
+main section .tab_title a span {/* 비활성화 a의 자식 span */
+    color: #fff;
+    display: inline-block;
+    padding:7px 0;
+}
+main section .tab_title .active span {/* 활성화 된 a의 자식 span */ /* active 동적 요소 */
+    border-bottom:2px solid #48f79f;
+}/* 활성화 */
+main section .tab_title .sign_in {}
+main section .tab_title .sign_up {}
+/* ==========================탭 내용 */
+main section .tab_container {
+    padding: 0 30px;/* 앱의 주요 콘텐츠가 폰 좌우끝에 붙지 않도록 최소 여백설정 */
+}
+/* ==========================sign_in 클릭 시 열리는 내용 */
+main section .tab_container #login_frm {}
+main section .tab_container #login_frm .id_pw {}
+main section .tab_container #login_frm .id_pw input[name^=user] {
+    width: 100%; height:60px;
+    margin-bottom: 12px;
+    padding: 0px 25px;
+    border-radius: 50px;
+    background-color:#fff;
+}
+main section .tab_container #login_frm .id_pw input[name^=user]::placeholder {color: #ccc;}
+main section .tab_container #login_frm .login_stay {
+    margin:25px 0;
+}
+main section .tab_container #login_frm .login_stay input[name$=stay] {
+    display: none;
+}/* input[name$=stay]+label -> input의 name이 stay로 $끝나는 형제 라벨을 잡겠다 */ 
+main section .tab_container #login_frm .login_stay label {}
+/* =============================================checkbox 상태에 따라 디자인 변경 CSS */
+main section .tab_container #login_frm .login_stay input[name$=stay] + label {
+    background-image:url(../images/icon_unchecked.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    padding-left:30px;
+    color: #fff;
+}
+main section .tab_container #login_frm .login_stay input[name$=stay]:checked + label {
+    background-image:url(../images/icon_checked.png);
+}/* label을 눌러서 checkbox의 형제 라벨이 클릭 되도록 한다. */
+/* ========================================(아래)버튼 */
+main section .tab_container #login_frm .btn_search {}
+main section .tab_container #login_frm .btn_search #sign_in_btn {
+    width:100%; height:60px;
+    background-color: #21d45d;
+    color:#fff;
+    border-radius:50px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+main section .tab_container #login_frm .btn_search .pw_search {
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+/* ===========================sing_up 클릭 시 열리는 내용 */
+main section .tab_container #join_frm {}
