@@ -1,1 +1,79 @@
 /* index.css */
+main {
+    width: 1000px;
+    background-color: #eee;
+    margin: 0 auto;
+}
+main h1 {}
+main h1 a {}
+main h1 a img {}
+/* ============================가입약관 */
+main .law {
+    background-color: #fff;
+    white:90%; height: 180px;/* 보이는 영역 크기 */
+    overflow:auto;/* law의 크기보다 내용이 커지면 스크롤을 자동으로 만들어라 */
+    /* 부모 크기보다 자식이 클 경우 auto자동으로 스크롤을 보이고 부모 크기보다 자식이 작거나 같다면 auto자동으로 스크롤을 숨기는 속성값 | 내용이 길고 부모가 짧아야 가능! */
+    padding: 16px; margin:30px;
+}
+main .law h2 {
+    margin:0 0 30px;
+}
+main .law h3 {
+    margin:0 0 15px;
+}
+main .law p {line-height:1.5; margin: 20px 0;}
+/* ============================가입정보입력 */
+main #login_frm {}
+main #login_frm .member_info {
+    /* width: 1000px; */
+    overflow:hidden;/* 따로 떠있는되어 있는애 */ /* overflow -> 부모에게 */
+}
+main #login_frm .member_info dt {
+    width: 200px;
+    background-color: springgreen;
+    float: left;
+    clear: both;/* clear는 형제에게 */
+}
+main #login_frm .member_info dd {
+    float: left; 
+}
+/* 사용자 입력, 선택 양식을 담은 두번째 dd선택자 */
+/* main #login_frm .member_info dd:nth-of-type(odd) {background-color: yellow;} */
+main #login_frm .member_info dd:nth-of-type(2n+1) {
+    background-color: yellow;
+    width: 650px; 
+}/* :nth-of-type -> 전체 형제 기준 같은 태그중 n번째 대상 */
+/* 중복확인, 인증번호받기를 담은 세번째 dd선택자 */
+/* main #login_frm .member_info dd:nth-of-type(even) {background-color: skyblue;} */
+main #login_frm .member_info dd:nth-of-type(2n) {
+    background-color: skyblue;
+    width: 150px;
+}
+/* =================================나머지 자식, 자손 개별 선택자. */
+main #login_frm .member_info dt em {}
+/* =================================id,pw,name,email,phone 묶음속성 */
+main #login_frm .member_info dd input[name^=user] {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 90%;
+    padding: 12px;
+}
+/* =================================개별속성(id) */
+main #login_frm .member_info dd input[name$=id] {background-color: greenyellow;}
+/* =================================오른쪽 중복확인,인증번호 버튼 묶음 선택자 */
+main #login_frm .member_info dd:nth-of-type(2n) .btn {background-color: orange;}
+/* =================================휴대폰, 주소, 성별, 생년월일 */
+main #login_frm .member_info dd select[name^=news] {}
+main #login_frm .member_info dd select[name^=news] option {}
+main #login_frm .member_info dd input[name*=phone] {}
+/* =================================인증번호 버튼 개별 선택자 */
+main #login_frm .member_info dd #authentication_btn {background-color: crimson;}
+main #login_frm .member_info dd #address_search_btn {background-color: aqua;}
+main #login_frm .member_info dd #address_search_btn + span {background-color: darkcyan;}
+main #login_frm .member_info dd input[name=gender] {background-color: chocolate;}
+main #login_frm .member_info dd input[name=gender] + label {background-color: aquamarine;}
+main #login_frm .member_info dd input[name^=birthday] {background-color: tomato;}
+/* ============================가입버튼 */
+main #login_frm .btn {}
+main #login_frm .btn #sign_up_btn {background-color: blue;}
