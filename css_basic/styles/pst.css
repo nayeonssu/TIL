@@ -1,0 +1,42 @@
+/* pst.css */
+html, body {height:300vh;}/* 스크롤 */
+/* 공통 */
+.pst {background-color:#eee; padding:20px; margin:20px;}
+.pst li {width:100px; height:100px;}
+.pst li:nth-child(1) {background-color:pink;}
+.pst li:nth-child(2) {background-color:yellow;}
+.pst li:nth-child(3) {background-color: turquoise;}
+.pst li:nth-child(4) {background-color: orange;}
+/* 개별 */
+.pst1 {position:relative;}
+.pst1 li {}
+.pst1 li:nth-child(2) {
+    position:relative;/* 필수속성(relative -> 현재위치기준) */
+    left:20px; top:20px/* 선택속성(이동하고 싶은 방향에 따라 지정) */ /* 원래 위치로 돌아갈때 -> 0 */
+}
+.pst1 li:nth-child(3) {
+    position:absolute;/* 안보이는게 아니라 뒤에 있는거임 */ /* 부모의 기본은 body 가까운 부모에게 넣을려면 position 필요 */
+    right:0; bottom:0;
+}
+.pst1 li:nth-child(4) {position:absolute; right:0; top:0;}
+.pst1 li span {
+    display:inline-block;
+    border:5px solid red; padding:10px;
+    position:absolute;
+    right:0; bottom:0;
+}
+#all {
+    border:2px solid blue; width:500px; height:500px;
+    position:relative;
+}
+#all #box {
+    border:2px solid red; width:300px; height:300px;
+    position:absolute; right:20px; bottom:0;
+}
+#all #box .content {background-color:yellow; width:150px; height:150px;
+    position:absolute; left:0; bottom:0;
+}
+.top {
+    position:fixed; /* body기준 위치설정 */
+    right:50px; bottom:50px;
+}
