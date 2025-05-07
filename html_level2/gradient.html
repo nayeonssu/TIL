@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient | css</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        .btn {
+            display:block;
+            border:1px solid #000;
+            width:400px; height:200px;
+        }
+        #btn1 {
+            /* gradient 사용 시 -color 없이 통합 background로 명령한다. */
+            background:linear-gradient(-90deg,#eee,rgba(255,0,0,0.5), #ff0);/* (각도,color1,color2,color3c) */
+            background-size:400%;
+            transition:all 0.4s;
+        }
+        #btn1:hover {
+            background-position:100% 0;
+        }
+        h1 {
+            text-transform:uppercase;
+            font-size:2.5rem;
+            font-weight:800;
+            background:linear-gradient(90deg, purple, darkblue,#555, brown);
+            /* display:inline-block; */ /* 내용만큼만 크기를 인식한다. */
+            width:max-content; /* 넓이를 내용만큼 인식하겠다. */
+            background-size:400%;
+            transition:all 0.4s;
+            /* gradient 색상을 글자에 적용하기 위한 벙법(마스크 구조) */
+            color:transparent;
+            background-clip:text;/* 글자에 클리핑 적용 */
+        }
+        h1:hover {
+            background-position-x:100%;
+        }
+        h2 {
+            font-size:2.5rem;
+            font-weight:800;
+            line-height:1.3;
+            background:linear-gradient(90deg,rgba(255, 71, 84, 1) 0%, rgba(255, 254, 230, 1) 50%, rgba(255, 208, 97, 1) 100%);
+            width:max-content;
+            background-size:500%;
+            color:transparent;
+            transition:all 0.4s;
+            background-clip:text;
+        }
+        h2:hover {
+            background-position-x:100%;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn1" class="btn">Hover me!</button>
+    <h1>HTML & CSS & Javascript & figma & react</h1>
+    <h2>설빙 인기메뉴<br>프리미엄 생딸기 설빙</h2>
+</body>
+</html>

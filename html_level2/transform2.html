@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform | css</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        #parent {
+            background-color:#eee; padding:40px;
+        }
+        #parent .child {
+            width:150px; height:150px;/* transform 적용 전 크기 기본세팅 */
+            border:1px solid #000;
+        }
+        #parent .child1 {
+            transition:transform 1s;
+            transform-origin:right center;/* 원하는 방향으로 늘리고 싶을때 x -> y 축으로 작성 */
+        }
+        #parent:hover .child1 {
+            transform:scaleX(1.5)/* x축으로 늘린다. */
+        }
+        #parent .child2 {
+            position:relative; left:0; top:0;/* 기존상태 */
+            transition:all 0.5s;
+            transform-origin:left center;
+        }
+        #parent:hover .child2 {
+            /* transform:rotate(225deg);/* deg -> 각도 */
+            /* transform:skewX(25deg); */
+            /* transform:translate(50px, -20px); */
+            left:50px; top:-20px;/* 기존상태에서 변경된 모습 */
+        }
+        /* 네비게이션 만들기 */
+        nav {}
+        nav .gnb {
+            display:flex;
+        }
+        nav .gnb > li {
+            width:400px;
+            background-color:#333;
+            position:relative;
+        }
+        nav .gnb > li:hover .lnb {
+            /* display:block;/* lnb를 block으로 보이게 하겠다. */
+            transform:scaleY(1) translateY(0);
+            opacity:1;
+        }
+        nav .gnb > li > a {
+            color:#fff;/* 글꼴, 자간, 행간, 색등.. 은 가장 가까운 부모에게 쓴다. */
+            display:block;
+            text-align:center;
+            line-height:50px;
+        }
+        nav .gnb > li > .lnb {
+            position:absolute; left:0; top:40;/* absolute -> 사이트에서 겹칠때 */
+            background-color:#eee;
+            width:100%;/* 부모의 크기를 맟춘다. */
+            /* display:none;/* 초기 숨기기 */
+            transform:scaleY(0) translateY(-50px);
+            opacity:0;/* 투명도 */
+            transition:all 0.4s;
+            transform-origin:left top;/* 열릴때 위에서 아래로 */
+            /* scaleY(0) 숨기기, scaleY(1) 보이기 */
+            /* scaleX(0) 숨기기, scaleX(1) 보이기 */
+        }
+        nav .gnb > li > .lnb li {}
+        nav .gnb > li > .lnb li a {
+            display:block;
+            text-align:center;
+            line-height:30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="child child1"></div>
+        <div class="child child2"></div>
+    </div>
+    <hr>
+    <nav>
+        <ul class="gnb">
+            <li><a href="#">메인메뉴1</a>
+                <ul class="lnb">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메인메뉴2</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
