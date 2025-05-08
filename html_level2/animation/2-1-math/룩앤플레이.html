@@ -22,7 +22,6 @@
         main #visual {background:#26bad7; min-width:1200px; margin:0 auto; height:550px; position:relative;}
         main #visual #deco {position:relative; width:1200px; margin:0 auto;}
         main #visual #deco .obj {position:absolute;}
-
         main #visual #deco .obj1 {
             top:170px; left:50%; margin-left:-342px;
         }
@@ -67,9 +66,25 @@
             text-align:center; background:#f1f1f1; color:#222;
         }
         main .category a.active {background:#26bad7; color:#fff;}
-
+        /* 애니메이션 포출 그룹 */
+        main #visual #deco .obj1,
+        main #visual #deco .obj3,
+        main #visual #deco .obj6 {animation:rotate 3s linear 1s infinite alternate both;}
+        main #visual #deco .obj2,
+        main #visual #deco .obj4,
+        main #visual #deco .obj7,
+        main #visual #deco .obj9 {animation:scale 0.9s linear 1s infinite alternate both;}
+        main #visual #deco .obj8,
+        main #visual #deco .obj5 {animation:rotate 3s linear 1s infinite alternate-reverse both;}
         /* 애니메이션 */
-
+        @keyframes rotate {
+            from {transform:rotate(-10deg);}
+            to {transform:rotate(10deg);}
+        }
+        @keyframes scale {
+            form {transform:scale(1);}
+            to {transform:scale(1.3);}
+        }
     </style>
 </head>
 <body>
@@ -85,14 +100,14 @@
         <div id="visual">
             <div id="deco">
                 <span class="obj obj1"><img src="images3/sub-top-obj1.png" alt=""></span>
-                <span class="obj obj2"><img src="images3/sub3-top-obj1.png" alt=""></span>
+                <span class="obj obj2"><img src="images3/sub3-top-obj1.png" alt=""></span><!-- 별 -->
                 <span class="obj obj3"><img src="images3/sub3-top-obj2.png" alt=""></span>
-                <span class="obj obj4"><img src="images3/sub3-top-obj3.png" alt=""></span>
+                <span class="obj obj4"><img src="images3/sub3-top-obj3.png" alt=""></span><!-- 별 -->
                 <span class="obj obj5"><img src="images3/sub3-top-obj4.png" alt=""></span>
                 <span class="obj obj6"><img src="images3/sub3-top-obj5.png" alt=""></span>
-                <span class="obj obj7"><img src="images3/sub3-top-obj6.png" alt=""></span>
+                <span class="obj obj7"><img src="images3/sub3-top-obj6.png" alt=""></span><!-- 별 -->
                 <span class="obj obj8"><img src="images3/sub3-top-obj7.png" alt=""></span>
-                <span class="obj obj9"><img src="images3/sub3-top-obj8.png" alt=""></span>
+                <span class="obj obj9"><img src="images3/sub3-top-obj8.png" alt=""></span><!-- 별 -->
             </div>
             <div id="book_center">
                 <!-- <span><img src="images3/society-1-3-2-left.png" alt=""></span> -->

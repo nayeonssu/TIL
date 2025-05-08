@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform | css</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        main {
+            /* width:100%; */
+            height:100vh;
+            background:linear-gradient(70deg, #fff, #ccc, #999, #666)
+        }
+        main .card_container {
+            perspective:1000px;/* 부모 원근감 깊이 설정 */
+        }
+        main .card_container .card {
+            width:640px; height:420px;
+            position:relative;
+            display:block;/* 크기인식 속성 변경 */
+            transform:scale(0.5);/* 카드 크기 조절 */
+            transform-style:preserve-3d;/* 뒤집는 카드 3d 부모 설정 */
+            transition:all 0.5s;/* all -> 변화되는 모든 속성 */ /* 뒤집는 카드 애니메이션 */
+        }
+        main .card_container .card:hover {
+            transform:rotateY(180deg) scale(0.5);/* (마우스 올렸을 시)카드 뒤집기 */
+        }
+        main .card_container .card > * {
+            /* 카드의 앞 뒤를 겹치게 하기 위해서 부모 뒤의 모두에게 적용하게 한다. */
+            position:absolute; left:0; top:0;/* 앞, 뒷면 카드 겹치기 */
+            /* 이면가시성 CSS - 뒷면을 안보이게 하는 방법 */
+            backface-visibility:hidden;/* hidden 숨기기 */
+        }
+        main .card_container .card .front {}
+        main .card_container .card .front img {}
+        main .card_container .card .back {
+            transform:rotateY(180deg);
+        }
+        main .card_container .card .back img {}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="card_container">
+            <a href="#" class="card">
+                <div class="front"><img src="./images/card_front.png" alt=""></div>
+                <div class="back"><img src="./images/card_back.png" alt=""></div>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
