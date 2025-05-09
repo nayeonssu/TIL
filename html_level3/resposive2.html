@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹2 | css</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        /* desktop(기준) 설정 start */
+        main {
+            /* dsektop에서 보이는 화면 */
+            width:100%;/* 넓이 기본값 */
+            /* max-width:1920px; */
+            min-width:320px;
+            border:5px solid red;
+            height:100vh;/* 웹 화면에서 볼때의 높이 */
+        }
+        main ul {
+            /* 정렬방향 */
+            display:flex; flex-flow:row wrap;/* 왼쪽에서 오른쪽으로 줄바꿈됨 */
+            gap:6px;
+        }
+        main ul li {
+            /* 화면비율에 나눌 대상 설정 */
+            /* width:calc(100% / 4) */ /* 여백이 없는 경우 */
+            width:calc((100% - (6px * 3)) / 4);/* 여백이 있는 경우 */
+            height:150px;
+        }
+        /* desktop(기준) 설정 end */
+        main ul li:nth-child(odd) {background-color:skyblue;}
+        main ul li:nth-child(even) {background-color:pink;}
+        @media screen and (max-width:1199px)/* 규칙은 ';' 쓰면 안된다. */ {
+            /* tablet에서 보이는 화면 */
+            main {
+                /* min-width:720px; */ /* mobile에서 719까지 최대값을 넣어놨기 때문에 tablet에서 최소값을 쓸 필요가 없다. */
+                border-color:yellow;
+            }
+            main ul li {
+                width:calc((100% - (6px * 2)) / 3);
+                height:150px;
+            }
+        }/* 720~1199 tablet end */
+        @media screen and (max-width:719px){
+            main {
+                /* min-width:320px; */ /* display에서 320까지 최소값을 넣어놨기 때문에 mobile에서 최소값을 쓸 필요가 없다. */
+                border-color:green;
+            }
+            main ul li {
+                width:calc((100% - (6px * 1)) / 2);
+                height:150px
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 공통 여백(gap) 6px -->
+    <!-- 1200~1920 desktop (4열) -->
+    <!-- 720~1199 tablet (3열) -->
+    <!-- 320~719 mobile (2열) -->
+    <main>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+    </main>
+</body>
+</html>
