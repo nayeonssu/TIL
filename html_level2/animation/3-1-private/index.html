@@ -8,6 +8,39 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/desktop.css">
     <link rel="stylesheet" href="styles/animation.css">
+    <style>
+        main {}
+        main .txt {}
+        main .txt img {}
+        main .bg_wrap {}
+        main .bg_wrap .bg {}
+        main .bg_wrap .bg1 {
+            animation:move_bg 70s linear infinite reverse;
+        }
+        main .bg_wrap .bg2 {
+            animation:move_bg 20s linear infinite reverse;
+        }
+        main .bg_wrap .bg3 {
+            animation:move_bg 7s linear infinite reverse;
+        }
+        main .car {}
+        main .car #car {}
+        main .car #left_tire {
+            animation:wheel 1s linear infinite reverse;
+        }
+        main .car #right_tire {
+            animation:wheel 1s linear infinite reverse;
+        }
+        main .scroll {}
+        @keyframes wheel {
+            from {transform:rotate(0);}
+            to {transform:rotate(360deg);}
+        }
+        @keyframes move_bg {
+            0% {background-position:0 0;}
+            100% {background-position:-1000px 0;}
+        }
+    </style>
     <script>
         window.onload=function(){
 
