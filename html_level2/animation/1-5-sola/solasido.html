@@ -25,10 +25,7 @@
         }
         .slide_wrap .slide_c .slide1 {
             background-image:url(images/bg1.jpg); opacity:1;
-            animation:scale 2s linear both;
-        }
-        .slide_wrap .slide_c .slide1 > p {
-            animation:title 0.8s linear 0.2s both;
+            animation:bg 2s both;
         }
         .slide_wrap .slide_c .slide2 {background-image:url(images/bg2.jpg);}
         .slide_wrap .slide_c .slide3 {background-image:url(images/bg3.jpg);}
@@ -36,24 +33,27 @@
             text-align:center; color:#fff;
             font-size:3rem; letter-spacing:-1px;
             position:relative; top:400px;
+            animation:txt 0.5s linear both;
         }
-        @keyframes title {
-            0% {
-                transform:translateY(0px) scale(0.8);
-                opacity:0;
-            }
-            100% {
-                transform:translateY(-20px) scale(1);
-                opacity:1;
-            }
-        }
-        @keyframes scale {
-            0% {transform:scale(1)}
-            100% {transform:scale(1.2)}
-        }
+        
         /* class */
 
         /* animation */
+        @keyframes txt {
+            0% {
+                transform:translateY(20px) scale(0.8);
+                opacity:0;
+            }
+            100% {
+                transform:translateY(0) scale(1);
+                opacity:1;
+            }
+            /* 투명도 opacity | 크기 width height | 위로이동 top */
+        }
+        @keyframes bg {
+            0% {/* transform:scale(1) */background-size:100%;}
+            100% {/* transform:scale(1.2) */background-size:120%;}
+        }
 
     </style>
     <script>
